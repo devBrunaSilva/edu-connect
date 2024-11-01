@@ -8,8 +8,8 @@
 
 <p align="center">
  <a href="#started">Primeiros Passos</a> •
- <a href="#tech">Tecnologias</a> •
-  <a href="#colab">Colaboradores</a> •
+ <a href="#endpoints">Endpoints</a> •
+ <a href="#colab">Colaboradores</a> •
  <a href="#contribute">Contribua</a>
 </p>
 
@@ -59,6 +59,50 @@ npm run dev
 
 - node
 - express
+
+<h2 id="endpoints">📌 Endpoints</h2>
+
+### **Criar Aluno**
+`POST /alunos`  
+Cria um novo aluno.
+
+**Corpo da Requisição:**
+```json
+{
+  "nome": "John Doe",
+  "email": "john_doe@mail.com",
+  "nome_curso": "sistemas de informação"
+}
+```
+
+---
+
+### **Listar Alunos**
+`GET /alunos`  
+Retorna todos as alunos cadastrados.
+
+---
+
+### **Atualizar Aluno**
+`PUT /alunos/:id`  
+Atualiza um aluno existente.
+
+**Corpo da Requisição:**
+```json
+{
+  "nome": "John Doe",
+  "email": "john_doe@mail.com",
+  "nome_curso": "sistemas de informação"
+}
+```
+
+---
+
+### **Deletar Aluno**
+`DELETE /alunos/:id`  
+Remove um aluno pelo ID.
+
+---
 
 
 <h2 id="colab">🤝 Colaboradores</h2>
