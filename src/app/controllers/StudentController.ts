@@ -1,8 +1,12 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express'
+
+import StudentRepository from '../repositories/StudentRepository'
 
 class StudentController {
-  index(req: Request, res: Response) {
-    // Listar os alunos
+  index(_req: Request, res: Response) {
+    const alunos = StudentRepository.findAll()
+
+    res.json(alunos)
   }
 
   store(req: Request, res: Response) {
@@ -18,4 +22,4 @@ class StudentController {
   }
 }
 
-module.exports = new StudentController();
+export default new StudentController()

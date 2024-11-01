@@ -1,21 +1,22 @@
-class StudentRepository {
-  findAll() {
-
-  }
-
-
-  create() {
-
-  }
-
-  update() {
-
-  }
-
-  
-  delete() {
-
-  }
+type Aluno = {
+  id: string
+  nome: string
+  email: string
+  nome_curso: string
 }
 
-module.exports = new StudentRepository();
+const alunos: Aluno[] = [{ id: '', nome: '', email: '', nome_curso: '' }]
+
+class StudentRepository {
+  findAll() {
+    return alunos
+  }
+
+  create() {}
+
+  update() {}
+
+  delete() {}
+}
+
+export default new StudentRepository()
