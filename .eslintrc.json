@@ -1,0 +1,3 @@
+{
+  "extends": "@franklinrms/eslint-config/node"
+}
