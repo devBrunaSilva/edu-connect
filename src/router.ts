@@ -7,6 +7,9 @@ const router = Router();
 // Listar alunos
 router.get("/alunos", StudentController.index);
 
+// Buscar aluno por ID
+router.get("/alunos/:id", StudentController.findById);
+
 // Cadastrar aluno
 router.post("/alunos", StudentController.store);
 
