@@ -1,34 +1,53 @@
-import { uuid } from "uuidv4";
+import { uuid } from 'uuidv4'
 
 type Aluno = {
-  id: string;
-  nome: string;
-  email: string;
-  nome_curso: string;
-};
+  id: string
+  nome: string
+  email: string
+  nomeCurso: string
+}
 
-const alunos: Aluno[] = [];
+const alunos: Aluno[] = []
 
 class StudentRepository {
   findAll() {
-    return alunos;
+    return alunos
   }
 
-  create({ nome, email, nome_curso }: Omit<Aluno, "id">): Aluno {
+  findById(id: string) {
+    return alunos.find((aluno) => aluno.id === id)
+  }
+
+  create({ nome, email, nomeCurso }: Omit<Aluno, 'id'>): Aluno {
     const newStudent: Aluno = {
       id: uuid(),
       nome,
       email,
-      nome_curso,
-    };
+      nomeCurso,
+    }
 
-    alunos.push(newStudent);
-    return newStudent;
+    alunos.push(newStudent)
+    return newStudent
   }
 
-  update() {}
+  update(id: string, { nome, email, nomeCurso }: Omit<Aluno, 'id'>) {
+    const studentIndex = alunos.findIndex((aluno) => aluno.id === id)
+
+    if (studentIndex < 0) {
+      return null
+    }
+
+    alunos[studentIndex] = {
+      id,
+      nome: nome || alunos[studentIndex].nome,
+      email: email || alunos[studentIndex].email,
+      nomeCurso: nomeCurso || alunos[studentIndex].nomeCurso,
+    }
+
+    return alunos[studentIndex]
+  }
 
   delete() {}
 }
 
-export default new StudentRepository();
+export default new StudentRepository()
