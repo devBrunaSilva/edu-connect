@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import StudentRepository from "../repositories/StudentRepository";
 
 class StudentController {
   index(_req: Request, res: Response) {
@@ -30,4 +31,4 @@ class StudentController {
   }
 }
 
-module.exports = new StudentController();
+export default new StudentController();
