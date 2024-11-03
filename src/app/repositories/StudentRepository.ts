@@ -1,53 +1,61 @@
 import { uuid } from 'uuidv4'
 
-type Aluno = {
+type Student = {
   id: string
   nome: string
   email: string
   nomeCurso: string
 }
 
-const alunos: Aluno[] = []
+const students: Student[] = []
 
 class StudentRepository {
   findAll() {
-    return alunos
+    return students
   }
 
   findById(id: string) {
-    return alunos.find((aluno) => aluno.id === id)
+    return students.find((student) => student.id === id)
   }
 
-  create({ nome, email, nomeCurso }: Omit<Aluno, 'id'>): Aluno {
-    const newStudent: Aluno = {
+  create({ nome, email, nomeCurso }: Omit<Student, 'id'>): Student {
+    const newStudent: Student = {
       id: uuid(),
       nome,
       email,
       nomeCurso,
     }
 
-    alunos.push(newStudent)
+    students.push(newStudent)
     return newStudent
   }
 
-  update(id: string, { nome, email, nomeCurso }: Omit<Aluno, 'id'>) {
-    const studentIndex = alunos.findIndex((aluno) => aluno.id === id)
+  update(id: string, { nome, email, nomeCurso }: Omit<Student, 'id'>) {
+    const studentIndex = students.findIndex((student) => student.id === id)
 
     if (studentIndex < 0) {
       return null
     }
 
-    alunos[studentIndex] = {
+    students[studentIndex] = {
       id,
-      nome: nome || alunos[studentIndex].nome,
-      email: email || alunos[studentIndex].email,
-      nomeCurso: nomeCurso || alunos[studentIndex].nomeCurso,
+      nome: nome || students[studentIndex].nome,
+      email: email || students[studentIndex].email,
+      nomeCurso: nomeCurso || students[studentIndex].nomeCurso,
     }
 
-    return alunos[studentIndex]
+    return students[studentIndex]
   }
 
-  delete() {}
+  delete(id: string): boolean {
+    const studentIndex = students.findIndex((student) => student.id === id)
+    if (studentIndex === -1) {
+      return false
+    }
+
+    students.splice(studentIndex, 1)
+    return true
+  }
 }
 
 export default new StudentRepository()

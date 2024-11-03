@@ -63,8 +63,23 @@ class StudentController {
     res.json(updatedStudent)
   }
 
-  delete() {
-    // Excluir um aluno
+  delete(req: Request, res: Response) {
+    const { id } = req.params
+    const student = StudentRepository.findById(id)
+
+    if (!student) {
+      res.status(404).json({ error: 'Aluno não encontrado' })
+      return
+    }
+
+    const deleted = StudentRepository.delete(id)
+
+    if (!deleted) {
+      res.status(404).json({ error: 'Falha ao excluir' })
+      return
+    }
+
+    res.status(204).send()
   }
 }
 
