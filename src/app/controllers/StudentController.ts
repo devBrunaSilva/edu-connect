@@ -1,16 +1,24 @@
-import { Request, Response } from 'express'
-
-import StudentRepository from '../repositories/StudentRepository'
+import { Request, Response } from "express";
 
 class StudentController {
   index(_req: Request, res: Response) {
-    const alunos = StudentRepository.findAll()
+    const alunos = StudentRepository.findAll();
 
-    res.json(alunos)
+    res.json(alunos);
   }
 
-  store(req: Request, res: Response) {
-    // Criar um novo aluno
+  store(req: Request, res: Response): void {
+    const { nome, email, nome_curso } = req.body;
+
+    if (!nome || !email || !nome_curso) {
+      res
+        .status(400)
+        .json({ error: "Nome, email e nome do curso são obrigatórios" });
+      return;
+    }
+
+    const newStudent = StudentRepository.create({ nome, email, nome_curso });
+    res.status(201).json(newStudent);
   }
 
   update(req: Request, res: Response) {
@@ -22,4 +30,4 @@ class StudentController {
   }
 }
 
-export default new StudentController()
+module.exports = new StudentController();
