@@ -83,7 +83,7 @@ Cria um novo aluno.
 Retorna todos as alunos cadastrados.
 
 ---
-### **Atualizar Aluno**
+### **Retornar Aluno**
 `GET /alunos/:id`  
 Retorna um aulno específico cadastrado.
 
