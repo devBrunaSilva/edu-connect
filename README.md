@@ -54,6 +54,7 @@ Execute a aplicação:
 npm run dev
 ```
 
+Acesse a API em: http://localhost:3001
 
 <h2 id="technologies">💻 Tecnologias</h2>
 
@@ -71,7 +72,7 @@ Cria um novo aluno.
 {
   "nome": "John Doe",
   "email": "john_doe@mail.com",
-  "nome_curso": "sistemas de informação"
+  "nomeCurso": "sistemas de informação"
 }
 ```
 
@@ -82,7 +83,11 @@ Cria um novo aluno.
 Retorna todos as alunos cadastrados.
 
 ---
+### **Atualizar Aluno**
+`GET /alunos/:id`  
+Retorna um aulno específico cadastrado.
 
+---
 ### **Atualizar Aluno**
 `PUT /alunos/:id`  
 Atualiza um aluno existente.
@@ -92,7 +97,7 @@ Atualiza um aluno existente.
 {
   "nome": "John Doe",
   "email": "john_doe@mail.com",
-  "nome_curso": "sistemas de informação"
+  "nomeCurso": "sistemas de informação"
 }
 ```
 
