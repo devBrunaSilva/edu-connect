@@ -1,4 +1,4 @@
-import { uuid } from 'uuidv4'
+import { v4 } from 'uuid'
 
 type Student = {
   id: string
@@ -20,7 +20,7 @@ class StudentRepository {
 
   create({ nome, email, nomeCurso }: Omit<Student, 'id'>): Student {
     const newStudent: Student = {
-      id: uuid(),
+      id: v4(),
       nome,
       email,
       nomeCurso,

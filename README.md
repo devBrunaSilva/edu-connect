@@ -131,14 +131,6 @@ Remove um aluno pelo ID.
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/GabrielAndradeSD">
-        <img src="https://avatars.githubusercontent.com/u/180300997?v=4" width="100px;" alt="Gabriel Andrade Profile Picture"/><br>
-        <sub>
-          <b>Gabriel Andrade</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
       <a href="https://github.com/patrickmps">
         <img src="https://avatars.githubusercontent.com/u/58093259?v=4" width="100px;" alt="Patrick Mota Profile Picture"/><br>
         <sub>
