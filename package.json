@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "express": "^4.21.1",
-    "uuidv4": "^6.2.13"
+    "uuid": "^11.0.2"
   },
   "devDependencies": {
     "@franklinrms/eslint-config": "^1.1.1",
