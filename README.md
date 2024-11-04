@@ -64,7 +64,7 @@ Acesse a API em: http://localhost:3001
 <h2 id="endpoints">📌 Endpoints</h2>
 
 ### **Criar Aluno**
-`POST /alunos`  
+`POST /alunos`
 Cria um novo aluno.
 
 **Corpo da Requisição:**
@@ -79,17 +79,17 @@ Cria um novo aluno.
 ---
 
 ### **Listar Alunos**
-`GET /alunos`  
+`GET /alunos`
 Retorna todos as alunos cadastrados.
 
 ---
 ### **Retornar Aluno**
-`GET /alunos/:id`  
+`GET /alunos/:id`
 Retorna um aulno específico cadastrado.
 
 ---
 ### **Atualizar Aluno**
-`PUT /alunos/:id`  
+`PUT /alunos/:id`
 Atualiza um aluno existente.
 
 **Corpo da Requisição:**
@@ -104,7 +104,7 @@ Atualiza um aluno existente.
 ---
 
 ### **Deletar Aluno**
-`DELETE /alunos/:id`  
+`DELETE /alunos/:id`
 Remove um aluno pelo ID.
 
 ---
@@ -168,7 +168,7 @@ Remove um aluno pelo ID.
 
 <h2 id="contribute">📫 Contribua</h2>
 
-Contribuições são sempre bem-vindas! Se você deseja ajudar a melhorar o Listy, siga os passos abaixo:
+Contribuições são sempre bem-vindas! Se você deseja ajudar a melhorar o EduConnect, siga os passos abaixo:
 
 1. Faça um fork do repositório.
 2. Crie uma branch para sua feature ou correção de bug: `git checkout -b feature/nome-da-feature`.
