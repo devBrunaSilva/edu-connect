@@ -64,7 +64,7 @@ Acesse a API em: http://localhost:3001
 <h2 id="endpoints">📌 Endpoints</h2>
 
 ### **Criar Aluno**
-`POST /alunos`  
+`POST /alunos`
 Cria um novo aluno.
 
 **Corpo da Requisição:**
@@ -79,17 +79,17 @@ Cria um novo aluno.
 ---
 
 ### **Listar Alunos**
-`GET /alunos`  
+`GET /alunos`
 Retorna todos as alunos cadastrados.
 
 ---
 ### **Retornar Aluno**
-`GET /alunos/:id`  
+`GET /alunos/:id`
 Retorna um aulno específico cadastrado.
 
 ---
 ### **Atualizar Aluno**
-`PUT /alunos/:id`  
+`PUT /alunos/:id`
 Atualiza um aluno existente.
 
 **Corpo da Requisição:**
@@ -104,7 +104,7 @@ Atualiza um aluno existente.
 ---
 
 ### **Deletar Aluno**
-`DELETE /alunos/:id`  
+`DELETE /alunos/:id`
 Remove um aluno pelo ID.
 
 ---
@@ -127,14 +127,6 @@ Remove um aluno pelo ID.
         <img src="https://avatars.githubusercontent.com/u/88167195?v=4" width="100px;" alt="Franklin Ramos Profile Picture"/><br>
         <sub>
           <b>Franklin Ramos</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/GabrielAndradeSD">
-        <img src="https://avatars.githubusercontent.com/u/180300997?v=4" width="100px;" alt="Gabriel Andrade Profile Picture"/><br>
-        <sub>
-          <b>Gabriel Andrade</b>
         </sub>
       </a>
     </td>
